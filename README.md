@@ -31,4 +31,9 @@ Virtual DOM is valuable because it allows you to build apps without thinking abo
 
 ### Svelte?
 
-But it turns out that we can achieve a similar programming model without using virtual DOM — and that's where Svelte comes in. (그래서 Svelte 왜 쓰냐고...)
+But it turns out that we can achieve a similar programming model without using virtual DOM — and that's where Svelte comes in. (그래서 Svelte 왜 쓰냐고... 명확한 근거가 나와있지 않아 아쉽다.)
+
+## 이 Repository의 목표
+
+Svelte의 주요 기능을 확인할 수 있는 페이지로 이루어진 웹사이트 구현. 
+Sapper로 server-side-rendering을 하고 firebase로 deploy해서 간단한 Svelte Tutorial Website를 만들어 볼 예정이다!
