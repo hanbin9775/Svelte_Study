@@ -39,14 +39,17 @@
 </style>
 
 <svelte:head>
-	<title>Sapper project template</title>
+	<title>Study Sapper & Svelte</title>
 </svelte:head>
 
-<h1>Great success!</h1>
+<h1>Let's Study Svelte & Sapper</h1>
 
 <figure>
 	<img alt="Success Kid" src={successkid} />
-	<figcaption>Have fun with Sapper!</figcaption>
+	<figcaption>This website is about...</figcaption>
 </figure>
 
-<p><strong>hi</strong></p>
+<p>
+	Svelte를 공부하고 간략하게 정리한 내용을 각 Svelte 페이지로 보여주고
+	Sapper로 sever-side-rendering
+</p>

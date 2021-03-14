@@ -9,18 +9,23 @@
 
 const posts = [
   {
-    title: "add",
+    title: "Add Data",
     slug: "add",
-    html: `
-    <p>
-      dasdsa Data
-    <p>
-    `,
+    code: `<pre>
+    &lt;script&gt; 
+      let name = "world"; 
+    &lt;/script&gt; 
+      
+    &lt;h1&gt;Hello &#123;name&#125;&lt;/h1&gt;
+    </pre>`,
+    result: `<h1>Hello world</h1>`,
+    memo: `script 태그 내에 변수를 선언. 해당 변수는 svelte 파일내에서 {[변수명]} 으로 사용 가능. `,
   },
 ];
 
 posts.forEach((post) => {
-  post.html = post.html.replace(/^\t{3}/gm, "");
+  post.code = post.code.replace(/^\t{3}/gm, "");
+  post.result = post.result.replace(/^\t{3}/gm, "");
 });
 
 export default posts;
