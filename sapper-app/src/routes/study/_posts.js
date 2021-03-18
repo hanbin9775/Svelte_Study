@@ -66,6 +66,23 @@ const posts = [
     이렇게 가져온 컴포넌트는 style이 겹치지 않는다. Hello Paragraph 만 color: red; 가 적용된 것을 볼 수 있다.
     `,
   },
+  {
+    title: "HTML Tags",
+    slug: "html-tags",
+    code: `<pre>
+&lt;script&gt; 
+  let string = "this string contains some &lt;strong&gt;HTML!!!&lt;/strong&gt;"
+&lt;/script&gt; 
+  
+&lt;p&gt;{@html string}&lt;/p&gt;
+    </pre>`,
+    result: `<p>this string contains some <strong>HTML!!!</strong> </p>`,
+    memo: `script 태그 내에서 직접 html 태그까지 선언하는 방법. </br>
+    script 태그내에서 선언한 변수를 실제로 사용할 때 앞에 @html 키워드를 붙여준다.</br>
+    Svelte는 {@html ...}가 DOM에 삽입되기 전에 내부 표현식의 삭제를 수행하지 않는다.</br>
+    즉, 이 기능을 사용하는 경우 신뢰할 수없는 소스에서 가져온 HTML을 수동으로 이스케이프하는 것이 중요하다.</br> 
+    그렇지 않으면 사용자가 XSS 공격에 노출 될 위험이 있다.`,
+  },
 ];
 
 posts.forEach((post) => {

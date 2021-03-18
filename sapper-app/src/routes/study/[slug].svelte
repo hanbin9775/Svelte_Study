@@ -57,6 +57,10 @@
     display: flex;
     gap: 20%;
   }
+
+  .w-50 {
+    width: 50%;
+  }
 </style>
 
 <svelte:head>
@@ -66,14 +70,14 @@
 <h1>{post.title}</h1>
 
 <section class="study-content">
-  <div>
+  <div class="w-50">
     <h2>Code</h2>
     <div class="content">
       {@html post.code}
     </div>
   </div>
 
-  <div>
+  <div class="w-50">
     <h2>Result</h2>
     <div class="content">
       {@html post.result}
