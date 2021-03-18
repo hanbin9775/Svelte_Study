@@ -83,6 +83,25 @@ const posts = [
     즉, 이 기능을 사용하는 경우 신뢰할 수없는 소스에서 가져온 HTML을 수동으로 이스케이프하는 것이 중요하다.</br> 
     그렇지 않으면 사용자가 XSS 공격에 노출 될 위험이 있다.`,
   },
+  {
+    title: "Making an App",
+    slug: "making-an-app",
+    code: `<pre>
+import App from './App.svelte';
+
+const app = new App({
+	target: document.body,
+	props: {
+		// we'll learn about props later
+		answer: 42
+	}
+});
+    </pre>`,
+    result: ``,
+    memo: `svelte 파일로 만든 컴퍼넌트를 위와 같이 실제 dom에 연결하는 방법.
+    svelte 컴파일러가 각 컴퍼넌트를 js class로 변환시켜줄 것이다.
+    `,
+  },
 ];
 
 posts.forEach((post) => {
