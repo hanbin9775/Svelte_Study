@@ -102,6 +102,38 @@ const app = new App({
     svelte 컴파일러가 각 컴퍼넌트를 js class로 변환시켜줄 것이다.
     `,
   },
+  {
+    title: "Reactivity",
+    slug: "reactivity",
+    code: `<pre>
+&lt;script&gt;
+  let count = 0;
+
+  function handleClick() {
+    count += 1;
+  }
+&lt;/script&gt;
+  
+&lt;button on:click={handleClick}&gt;
+  Clicked {count} {count === 1 ? 'time' : 'times'}
+&lt;/button&gt;
+    </pre>`,
+    result: `
+    <script>
+    let count = 0;
+
+    function handleClick() {
+      count += 1;
+    }
+    </script>
+    <button on:click={handleClick}>
+    Clicked {count} {count === 1 ? 'time' : 'times'}
+    </button>
+    `,
+    memo: `svelte 파일로 만든 컴퍼넌트를 위와 같이 실제 dom에 연결하는 방법.
+    svelte 컴파일러가 각 컴퍼넌트를 js class로 변환시켜줄 것이다.
+    `,
+  },
 ];
 
 posts.forEach((post) => {
